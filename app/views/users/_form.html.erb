@@ -1,3 +1,4 @@
+
 <%= form_with(model: user) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
@@ -11,25 +12,25 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group mb-3">
     <%= form.label :login %>
-    <%= form.text_field :login %>
+    <%= form.text_field :login, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group mb-3">
     <%= form.label :senha %>
-    <%= form.password_field :password_digest %>
+    <%= form.password_field :password_digest, class: "form-control" %>
   </div>
 
     <!--add para teste 11/09/2021-->
-    <div class="field">
+    <div class="form-group mb-3">
       <%= form.label :confirmação_da_senha %>
-      <%= form.password_field :password_confirmation %>
+      <%= form.password_field :password_confirmation, class: "form-control" %>
     </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Salvar', class: "btn btn-primary" %>
   </div>
 
-  
+ 
 <% end %>

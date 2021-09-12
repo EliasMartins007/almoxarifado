@@ -1,6 +1,6 @@
 class Material < ApplicationRecord
 
-    validates :nome, presence: true
+    validates :nome, presence: true, length: {maximum: 255}
     validates  :nome, uniqueness: {message: ',já existe um material no sistema com esse nome!'}
-    #validates_length_of :qtd, minimum: 1, message: 'não pode ser negativo!' # não funcionou para negativo
+    #validates :qtd, length: {minimum: 0, message: 'não pode ser negativo!'} # não funcionou para negativo
 end

@@ -4,7 +4,7 @@ class MaterialsController < ApplicationController
   # GET /materials or /materials.json
   def index
     #@materials = Material.all
-    @materials = Material.page(params[:page]).per(2)#mudar numero de itens exibidos na tela
+    @materials = Material.page(params[:page]).per(10)#mudar numero de itens exibidos na tela
   end
 
   # GET /materials/1 or /materials/1.json
