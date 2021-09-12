@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
-
+ <%= search_form_for @q do |f| %>
+   <%= f.label :Pesquisar_material_por_nome %>  
+   <%= f.search_field :nome_start %> 
+   <%= f.submit %>
+<% end %>
 <h1>Materiais</h1>
 
 <table class="table table-striped">

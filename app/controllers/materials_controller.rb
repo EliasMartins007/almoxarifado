@@ -3,8 +3,11 @@ class MaterialsController < ApplicationController
 
   # GET /materials or /materials.json
   def index
+    #pesquisa
+    @q = Material.ransack(params[:q])
     #@materials = Material.all
-    @materials = Material.page(params[:page]).per(10)#mudar numero de itens exibidos na tela
+    #@materials = Material.page(params[:page]).per(10)#mudar numero de itens exibidos na tela
+    @materials = @q.result.page(params[:page]).per(10)
   end
 
   # GET /materials/1 or /materials/1.json
