@@ -18,10 +18,18 @@
 
   <div class="field">
     <%= form.label :senha %>
-    <%= form.text_field :password_digest %>
+    <%= form.password_field :password_digest %>
   </div>
+
+    <!--add para teste 11/09/2021-->
+    <div class="field">
+      <%= form.label :confirmação_da_senha %>
+      <%= form.password_field :password_confirmation %>
+    </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+
+  
 <% end %>
