@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   ##root to: "main#index"
   #root to: 'users#index'
   
-  root to: "sessions#login"#root to: "sessions#new"
+  root to: "sessions#new"#root to: "sessions#new"
 
   get "users", to: "users#index"
   get "materials", to: "materials#index"
