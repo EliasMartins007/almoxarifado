@@ -34,7 +34,7 @@
 </table>
 
 <br>
-<%= paginate @materials %>
+<%= paginate @materials, theme: 'bootstrap-5' %>
 <%= page_entries_info @materials %>
 
 <%= link_to 'Novo Material', new_material_path, class:"btn btn-link" %>

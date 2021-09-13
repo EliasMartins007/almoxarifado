@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 #pages
 gem 'kaminari', '~> 1.0'
+#bootstrap5
+gem 'bootstrap5-kaminari-views', '~> 0.0.1'
 #pesquisa
 gem 'ransack'
 

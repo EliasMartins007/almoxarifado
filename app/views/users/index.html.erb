@@ -25,7 +25,7 @@
   </tbody>
 </table>
 <br>
-<%= paginate @users %>
+<%= paginate @users, theme: 'bootstrap-5' %>
 <%= page_entries_info @users %>
 
 <%= link_to 'Novo Usuário', new_user_path, class:"btn btn-link" %>
