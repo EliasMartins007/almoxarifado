@@ -12,9 +12,10 @@
 <table class="table table-striped">
   <thead>
     <tr class="table-primary">
-      <th>Nome</th>
-      <th><%= sort_link(@q, :qtd) %></th><!--th>Quantidade</th-->
-      <th>Descrição</th>
+      <th scope="col">ID</th>
+      <th scope="col">Nome</th>
+      <th scope="col"><%= sort_link(@q, :qtd) %></th><!--th>Quantidade</th-->
+      <th scope="col">Descrição</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,6 +23,7 @@
   <tbody>
     <% @materials.each do |material| %>
       <tr>
+        <th scope="row"><%= material.id %></th>
         <td><%= material.nome %></td>
         <td><%= material.qtd %></td>
         <td><%= material.descricao %></td>
@@ -37,4 +39,4 @@
 <%= paginate @materials, theme: 'bootstrap-5' %>
 <%= page_entries_info @materials %>
 
-<%= link_to 'Novo Material', new_material_path, class:"btn btn-link" %>
+<%= link_to 'Novo Material', new_material_path, class:"btn btn-outline-primary" %>

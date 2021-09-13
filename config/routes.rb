@@ -6,12 +6,12 @@ Rails.application.routes.draw do
   
   root to: "sessions#new"#root to: "sessions#new"
 
-  get "users", to: "users#index"
+  get "users", to: "users#index"  ##13/09/2021
   get "materials", to: "materials#index"
   get "entrar", to: "sessions#new"
   ###get "/login", to: "session#login"
   post "entrar", to: "sessions#create"#post "/login", to: "sessions#create"#post "entrar", to: "sessions#create"
-  post "/login", to: "sessions#create"
+  ###post "/login", to: "sessions#create"  ##13/09/2021 comentei
   #
   
 

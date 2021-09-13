@@ -12,8 +12,8 @@ class SessionsController < ApplicationController
       else
         flash.now[:danger] = "erro login"
         #message = "erro login"
-        ##redirect_to entrar_path #, notice: message  
-        redirect_to users_path
+        redirect_to entrar_path #, notice: message  
+        ###redirect_to users_path
       end
     end   
 

@@ -4,13 +4,14 @@ class UsersController < ApplicationController
   # GET /users or /users.json
   def index
     #@users = User.all
+    #paginação
     @users = User.page(params[:page]).per(10)#10 registros
   end
 
   # GET /users/1 or /users/1.json
-  ##def show
+  def show
     
-  ##end
+  end
 
   # GET /users/new
   def new
@@ -61,13 +62,13 @@ class UsersController < ApplicationController
   end
 
   # DELETE /users/1 or /users/1.json
-  ##def destroy
-    ##@user.destroy
-    ##respond_to do |format|
-      ##format.html { redirect_to users_url, notice: "Usuário excluido com sucesso." }
-      ##format.json { head :no_content }
-    ##end
-  ##end
+  def destroy
+    @user.destroy
+    respond_to do |format|
+      format.html { redirect_to users_url, notice: "Usuário excluido com sucesso." }
+      format.json { head :no_content }
+    end
+  end
 
 
   private
